@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        arr=["rock","paper","scissor"];
+        function computer(list){
+            let computerInputIndex=Math.floor(Math.random()*list.length);
+            let computerInput=list[computerInputIndex];
+            console.log(computerInput);
+            return computerInput;
+        }
+        function user(){
+            let userInput=prompt("Enter Rock, Paper or Scissor");
+            userInput=userInput.toLowerCase();
+            let computerOutput=computer(arr);
+            if(userInput==computerOutput){
+                return "You drew this round";
+            }else if(userInput!=computerOutput){
+                if(userInput=="rock" && computerOutput=="scissor"){
+                    return "Win";
+                }else if(userInput=="rock" && computerOutput=="paper"){
+                    return `You lose this round! ${userInput} loses to ${computerOutput}`;
+                }else if(userInput=="paper" && computerOutput=="scissor"){
+                    return `You lose this round! ${userInput} loses to ${computerOutput}`;
+                }else if(userInput=="paper" && computerOutput=="rock"){
+                    return "Win";
+                }else if(userInput=="scissor" && computerOutput=="rock"){
+                    return `You lose this round! ${userInput} loses to ${computerOutput}`;
+                }else if(userInput=="scissor" && computerOutput=="paper"){
+                    return "Win";
+                }
+            }else{
+                return "Wrong input, please enter Rock, Paper or Scissor";
+            }
+        }
+        function round(n){
+            let c=0;
+            for(let i=1;i<=n;i++){
+                let userData=user();
+                if(userData=="Win"){
+                    c+=1;
+                }
+            }
+            if(c>=n/2){
+                return("You won against the computer");
+            }else{
+                return("You lost against the computer")
+            }
+        }
+        alert(round(5));
+
+    </script>
+</body>
+</html>
