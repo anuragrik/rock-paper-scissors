@@ -3,58 +3,43 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <script>
-        arr=["rock","paper","scissor"];
-        function computer(list){
-            let computerInputIndex=Math.floor(Math.random()*list.length);
-            let computerInput=list[computerInputIndex];
-            console.log(computerInput);
-            return computerInput;
-        }
-        function user(){
-            let userInput=prompt("Enter Rock, Paper or Scissor");
-            userInput=userInput.toLowerCase();
-            let computerOutput=computer(arr);
-            if(userInput==computerOutput){
-                return "You drew this round";
-            }else if(userInput!=computerOutput){
-                if(userInput=="rock" && computerOutput=="scissor"){
-                    return "Win";
-                }else if(userInput=="rock" && computerOutput=="paper"){
-                    return `You lose this round! ${userInput} loses to ${computerOutput}`;
-                }else if(userInput=="paper" && computerOutput=="scissor"){
-                    return `You lose this round! ${userInput} loses to ${computerOutput}`;
-                }else if(userInput=="paper" && computerOutput=="rock"){
-                    return "Win";
-                }else if(userInput=="scissor" && computerOutput=="rock"){
-                    return `You lose this round! ${userInput} loses to ${computerOutput}`;
-                }else if(userInput=="scissor" && computerOutput=="paper"){
-                    return "Win";
-                }
-            }else{
-                return "Wrong input, please enter Rock, Paper or Scissor";
-            }
-        }
-        function round(n){
-            let c=0;
-            for(let i=1;i<=n;i++){
-                let userData=user();
-                if(userData=="Win"){
-                    c+=1;
-                }
-            }
-            if(c>=n/2){
-                return("You won against the computer");
-            }else{
-                return("You lost against the computer")
-            }
-        }
-        alert(round(5));
-
-    </script>
+    <script src="script.js" defer></script>
+    <div class="header">
+        <div><img src="images/rps.png" alt="Image of RPS"></div>
+        <div><a href="https://en.wikipedia.org/wiki/Rock_paper_scissors#:~:text=History-,Origins,206%20BCE%20%E2%80%93%20220%20CE).">History of 
+            Rock-Paper-Scissor</a></div>
+    </div>
+    <div class="main-content">
+        <div class="seperated">
+            <div class="rock-content">
+                <img src="images/rock.png" alt="Rock">
+                <button class="rock">Rock</button>
+            </div>
+            <div class="paper-content">
+                <img src="images/paper.png" alt="Paper">
+                <button class="paper">Paper</button>
+            </div>
+            <div class="scissor-content">
+                <img src="images/scissors.png" alt="Scissor">
+                <button class="scissor">Scissor</button>
+            </div>
+        </div>
+        <div class="text-seperated">
+            <div class="score-content">
+                <div class="roundResult"></div>
+                <div class="roundScore"></div>
+                <div class="finalResult"></div>
+            </div>
+        </div>
+    </div>
+    <div class="footer">
+        <div>Copyright- anuragrik</div>
+        <div class="linkedin"><a href="https://www.linkedin.com/in/anurag-guha-a71b671b2/">Linkedin</a></div>
+    </div>
 </body>
 </html>
