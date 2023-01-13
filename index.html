@@ -4,42 +4,48 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Rock Paper Scissor</title>
+    <link href="style.css" rel="stylesheet">
 </head>
 <body>
-    <script src="script.js" defer></script>
-    <div class="header">
-        <div><img src="images/rps.png" alt="Image of RPS"></div>
-        <div><a href="https://en.wikipedia.org/wiki/Rock_paper_scissors#:~:text=History-,Origins,206%20BCE%20%E2%80%93%20220%20CE).">History of 
-            Rock-Paper-Scissor</a></div>
-    </div>
-    <div class="main-content">
-        <div class="seperated">
-            <div class="rock-content">
-                <img src="images/rock.png" alt="Rock">
-                <button class="rock">Rock</button>
+    <div class="page-container">
+        <header>
+            <h1>ROCK PAPER SCISSORS</h1>
+        </header>
+        <div class="main-body">
+            <div id="outcome">
+
             </div>
-            <div class="paper-content">
-                <img src="images/paper.png" alt="Paper">
-                <button class="paper">Paper</button>
+            <div id="outcome-detail">
+
             </div>
-            <div class="scissor-content">
-                <img src="images/scissors.png" alt="Scissor">
-                <button class="scissor">Scissor</button>
+            <div id="play-comp">
+                <div id="player">
+                    <div>
+                        <img class="choice-img" src="images\scissor.png" alt="Your choice">
+                        <div id="score-player">Player:</div>
+                    </div>
+                </div>
+                <div id="computer">
+                    <div>
+                        <img class="choice-img" src="images\paper.png" alt="Computer's choice">
+                        <div id="score-computer">Computer:</div>
+                    </div>
+                </div>
+            </div>
+            <div id="choices">
+                <button onclick="rockClick()"><img src="images\rock.png" alt="Rock"></button>
+                <button onclick="paperClick()"><img src="images\paper.png" alt="Paper"></button>
+                <button onclick="scissorClick()"><img src="images\scissor.png" alt="Scissor"></button>
+            </div>
+            <div class="new game">
+                <button class="new-button" onclick="startGame()">NEW GAME</button>
             </div>
         </div>
-        <div class="text-seperated">
-            <div class="score-content">
-                <div class="roundResult"></div>
-                <div class="roundScore"></div>
-                <div class="finalResult"></div>
-            </div>
-        </div>
     </div>
-    <div class="footer">
-        <div>Copyright- anuragrik</div>
-        <div class="linkedin"><a href="https://www.linkedin.com/in/anurag-guha-a71b671b2/">Linkedin</a></div>
-    </div>
+    <footer>
+        <h3>Copyright © 2023 Anurag Guha</h3>
+    </footer>
+    <script src="index.js"></script>
 </body>
 </html>

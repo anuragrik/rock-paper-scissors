@@ -1,83 +1,92 @@
 body{
-    display:flex;
-    flex-direction: column;
-}
-.header img{
-    height: 130px;
-    width: 200px;
-}
-.header{
-    display:flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
-    background-color: white;
-    padding: 8px;
-}
-a{
-    text-decoration: none;
-    color: black;
-}
-.footer{
-    display: flex;
-    background-color: #fae536;
-    align-items: center;
-    justify-content: center;
-    padding: 8px;
-    gap: 14px;
-    font-family: 'Lato', sans-serif;
-}
-.linkedin{
-    font-weight: bold;
-    font-style: italic;
-}
-.main-content{
-    display: flex;
-    flex-direction: column;
-    background-color: #fce205;
-    justify-content: center;
-    align-items: center;
-    gap: 150px;
-    padding: 8px;
-    padding: 80px;
-}
-.seperated{
-    display: flex;
-    flex-direction: row;
-    gap: 100px;
-    justify-content: space-between;
-    align-items: center;
-}
-.text-seperated{
-    display: flex;
-    flex-direction: column;
-    gap: 5px;
-    font-style: 'Lato', sans-serif;
-    font-weight: bold;
-    color: black;
-}
-.rock-content,.paper-content,.scissor-content,.score-content{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-.score-content{
-    gap: 15px;
-}
-.finalResult{
-    font-size: larger;
-    font-weight: bold;
-}
-button{
-    height: 50px;
-    width: 90px ;
-    background-color: #0f0552;
-    border: none;
-    border-radius: 3px;
+    background-color: #2a2d3b;
+    margin: 0px;
+    text-align: center;
+    min-height: 100vh;
+    min-width: 100vw;
+    font-family: pricedown;
     color: white;
-    font-style: 'Lato', sans-serif;
-    font-size: large;
+    font-size: 30px;
 }
-    
-
+.page-container{
+    height: 100vh;
+    position: relative;
+}
+header{
+    background-color: #151c40;
+    height: 170px;
+    width: 100%;
+    margin-top: 0px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+@font-face {
+    font-family: sf-sports;
+    src: url(SFSportsNight.ttf);
+}
+@font-face {
+    font-family: pricedown;
+    src: url(pricedown.otf);
+}
+h1{
+    font-family: sf-sports;
+    margin-top: 0px;
+    color: white;
+    font-size: 50px;
+}
+.main-body{
+    display: flex;
+    flex-direction: column;
+    margin-top: 10px;
+    justify-content: space-between;
+    align-items: center;
+    gap: 30px;
+}
+#play-comp{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    gap: 100px;
+}
+#choices{
+    display: flex;
+    flex-direction: row;
+    gap: 16px;
+}
+.choice-img{
+    height: 80px;
+    width: 80px;
+}
+img{
+    height: 130px;
+    width: 130px;
+}
+footer{
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 2.5rem;  
+    bottom: 0;
+    background-color: #151c40;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: white;
+    font-weight: bold;
+    font-size: 10px;
+    margin-bottom: 0px;
+}
+.new-button{
+    border: none;
+    border-radius: 2px;
+    width: 140px;
+    height: 35px;
+    background-color: white;
+    color: black;
+    padding: 2px;
+    margin-bottom: 30px;
+    font-family: pricedown;
+    font-size: 20px;
+}
