@@ -108,4 +108,6 @@ function startGame(){
     scoreComputer.textContent= "Computer: "+countComputer
     outcomeDetail.textContent=""
     outcome.textContent=""
+    playerImg.innerHTML=""
+    computerImg.innerHTML=""
 }
